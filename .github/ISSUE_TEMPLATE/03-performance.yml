@@ -1,0 +1,122 @@
+name: "Segnalazione performance (perf)"
+description: >
+  Usa questo modulo per segnalare regressioni o problemi di performance.
+  Fornisci metriche, ambiente, passi per riprodurre e allega benchmark o log se disponibili.
+labels: ['performance', 'triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Segnalazione performance
+        Grazie per la segnalazione. Fornisci metriche chiare (es. tempi, throughput, percentili), dettagli sull'ambiente e i passi per riprodurre. Non includere dati sensibili.
+
+  - type: input
+    id: titolo_sintetico
+    attributes:
+      label: "Titolo sintetico"
+      description: "Usa il prefisso 'perf:' seguito da una breve descrizione."
+      placeholder: "perf: regressione tempo risposta endpoint X"
+    validations:
+      required: true
+
+  - type: input
+    id: versione
+    attributes:
+      label: "Versione o commit"
+      description: "Indica la versione del progetto o il commit SHA interessato."
+      placeholder: "v1.2.3 o commit SHA"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ambiente_tipo
+    attributes:
+      label: "Ambiente"
+      description: "Ambiente in cui si osserva il problema."
+      options:
+        - development
+        - staging
+        - production
+        - altro
+    validations:
+      required: true
+
+  - type: textarea
+    id: metriche
+    attributes:
+      label: "Metriche osservate"
+      description: "Riporta metriche precise (es. tempo medio 200ms, p95 1.2s, throughput 500 req/s). Indica valori prima/dopo se disponibili."
+      placeholder: |
+        Metriche prima: ...
+        Metriche dopo: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: passi_setup
+    attributes:
+      label: "Passi per riprodurre / Setup test"
+      description: "Descrivi come riprodurre il test o il setup del benchmark (comandi, dataset, carico)."
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: comportamento_atteso
+    attributes:
+      label: "Comportamento atteso"
+      description: "Quali valori o comportamento ti aspettavi dalle metriche."
+      placeholder: "Il comportamento atteso è..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: comportamento_osservato
+    attributes:
+      label: "Comportamento osservato"
+      description: "Cosa è stato osservato effettivamente durante i test."
+      placeholder: "Il comportamento osservato è..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: gravita
+    attributes:
+      label: "Gravità / Priorità"
+      description: "Indica la gravità dell'impatto sulle operazioni o sugli utenti."
+      options:
+        - critical
+        - high
+        - medium
+        - low
+    validations:
+      required: true
+
+  - type: textarea
+    id: informazioni_aggiuntive
+    attributes:
+      label: "Informazioni aggiuntive"
+      description: "Inserisci dettagli tecnici, configurazioni, versioni di dipendenze o link a dashboard/monitoring."
+      placeholder: "Inserisci qui ulteriori dettagli utili."
+    validations:
+      required: false
+
+  - type: textarea
+    id: allegati_link
+    attributes:
+      label: "Link a benchmark / profili / log"
+      description: "Incolla link a benchmark, profili CPU/memoria, grafici o log (es. link privato a storage). Dopo la creazione dell'issue puoi caricare file tramite l'interfaccia Issue."
+      placeholder: "Link a GDrive/S3 o URL a dashboard"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        **Promemoria**
+        - Assicurati di aver eseguito i test in condizioni ripetibili e di includere i comandi usati.
+        - Se il problema riguarda la produzione, indica eventuali workaround temporanei.

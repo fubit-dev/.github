@@ -1,0 +1,102 @@
+name: "Richiesta supporto"
+description: >
+  Usa questo modulo per chiedere assistenza, chiarimenti o aiuto operativo.
+  Fornisci contesto, versione, passi per riprodurre e allega log/screenshot se disponibili.
+labels: ['support', 'triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Richiesta di supporto
+        Fornisci contesto chiaro e, se possibile, comandi o esempi per riprodurre il problema. Allegati consigliati: screenshot, log, output dei comandi. Non includere dati sensibili o chiavi.
+
+  - type: input
+    id: pr_title
+    attributes:
+      label: "Titolo (OBBLIGATORIO)"
+      description: "Usa il prefisso 'support:' seguito da una breve descrizione."
+      placeholder: "support: problema con X o richiesta su Y"
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: "Versione / Release (OBBLIGATORIO)"
+      description: "Indica la versione del progetto o il commit SHA se rilevante."
+      placeholder: "v1.2.3"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: "Ambiente (OBBLIGATORIO)"
+      description: "Ambiente in cui si verifica il problema o dove serve supporto."
+      options:
+        - development
+        - staging
+        - production
+        - altro
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Descrizione della richiesta (OBBLIGATORIO)"
+      description: "Spiega chiaramente cosa ti serve, il contesto e l'obiettivo."
+      placeholder: "Descrizione della richiesta di supporto..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Passi per riprodurre / Comandi eseguiti (OPZIONALE)"
+      description: "Se applicabile, indica i comandi o i passi per riprodurre il problema."
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: "Urgenza (OBBLIGATORIO)"
+      description: "Indica quanto è urgente la richiesta."
+      options:
+        - critical
+        - high
+        - medium
+        - low
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: "Informazioni aggiuntive"
+      description: "Inserisci eventuali dettagli tecnici, link a documentazione o workaround provati."
+      placeholder: "Inserisci qui ulteriori dettagli utili."
+    validations:
+      required: false
+
+  - type: textarea
+    id: allegati_link
+    attributes:
+      label: "Link a screenshot / log / output"
+      description: "Incolla link a file o storage privato (es. GDrive, S3) o istruzioni per inviarli privatamente. Dopo la creazione dell'issue puoi caricare file tramite l'interfaccia Issue."
+      placeholder: "Link a GDrive/S3 o URL"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        **Promemoria**
+        - Fornisci il maggior numero di dettagli possibile per accelerare la risoluzione.
+        - Se la richiesta riguarda sicurezza o dati sensibili, usa il template "Segnalazione sicurezza".

@@ -1,0 +1,95 @@
+name: "Richiesta modifica documentazione"
+description: >
+  Usa questo modulo per proporre modifiche, correzioni o integrazioni alla documentazione.
+  Indica la pagina o il file interessato, la modifica proposta e fornisci esempi o testi suggeriti.
+labels: ['docs', 'triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Richiesta modifica documentazione
+        Compila i campi obbligatori, indica chiaramente la pagina/file da aggiornare e, se possibile, fornisci il testo proposto o un diff sintetico. Allegati consigliati: screenshot, estratti di file, esempi di codice.
+
+  - type: input
+    id: pr_title
+    attributes:
+      label: "Titolo (OBBLIGATORIO)"
+      description: "Usa il prefisso \"docs:\" seguito da una breve descrizione."
+      placeholder: "docs: corregge esempio nella guida X"
+    validations:
+      required: true
+
+  - type: input
+    id: doc_page
+    attributes:
+      label: "Pagina o file interessato (OBBLIGATORIO)"
+      description: "Indica il percorso o l'URL della pagina/documento da aggiornare (es. docs/guide/intro.md o /README.md)."
+      placeholder: "docs/guide/intro.md"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Descrizione della modifica proposta (OBBLIGATORIO)"
+      description: "Spiega in 2-4 righe cosa va cambiato e perché."
+      placeholder: "Descrizione della modifica proposta..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_text
+    attributes:
+      label: "Testo proposto / Esempio (OBBLIGATORIO)"
+      description: "Inserisci il testo suggerito, un esempio o un piccolo diff. Se preferisci, allega un file con il contenuto."
+      placeholder: "Testo proposto o snippet..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: "Impatto della modifica"
+      description: "Indica l'impatto su utenti, guide correlate, esempi di codice o processi di onboarding."
+      placeholder: "Impatto stimato..."
+    validations:
+      required: false
+
+  - type: input
+    id: related_issues
+    attributes:
+      label: "Issue correlate (opzionale)"
+      description: "Inserisci riferimenti a issue o PR correlate (es. #123, #456) se presenti."
+      placeholder: "#123, #456"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority / Urgenza"
+      description: "Indica la priorità stimata per questa modifica documentale."
+      options:
+        - critical
+        - high
+        - medium
+        - low
+    validations:
+      required: false
+
+  - type: textarea
+    id: allegati_link
+    attributes:
+      label: "Link a screenshot / estratti / esempi"
+      description: "Incolla link a file o storage privato (es. GDrive, S3) o istruzioni per inviarli privatamente. Dopo la creazione dell'issue puoi caricare file tramite l'interfaccia Issue."
+      placeholder: "Link a GDrive/S3 o URL"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        **Promemoria**
+        - Se proponi un cambiamento che influisce su API o comportamenti, segnala anche eventuali breaking changes nella PR.
+        - Ricorda di aggiornare eventuali traduzioni o file correlati.

@@ -1,0 +1,39 @@
+# CODEOWNERS per l'organizzazione fubit-dev
+
+# Sintassi: <pattern> <owner>
+
+# Owner può essere un team: @fubit-dev/reviewers
+
+# Le regole sono valutate dall'alto verso il basso; l'ultima regola catch-all è il fallback
+
+# Owners per file di documentazione e markdown
+
+/docs/ @fubit-dev/reviewers
+*.md @fubit-dev/reviewers
+
+# Owners per configurazioni e policy condivise
+
+/.github/ @fubit-dev/reviewers
+/.github/ISSUE_TEMPLATE/ @fubit-dev/reviewers
+/.github/PULL_REQUEST_TEMPLATE.md @fubit-dev/reviewers
+
+# Owners per workflow e CI
+
+/.github/workflows/ @fubit-dev/reviewers
+/.github/dependabot.yml @fubit-dev/reviewers
+
+# Owners per codice sorgente (cartelle comuni)
+
+src/ @fubit-dev/reviewers
+packages/ @fubit-dev/reviewers
+lib/ @fubit-dev/reviewers
+
+# Owners per file di build e configurazione
+
+package.json @fubit-dev/reviewers
+pnpm-lock.yaml @fubit-dev/reviewers
+tsconfig.json @fubit-dev/reviewers
+
+# Fallback: tutto il resto
+
+* @antoniofuscaldo

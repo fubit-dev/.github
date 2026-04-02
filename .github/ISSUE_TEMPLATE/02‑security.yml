@@ -1,0 +1,69 @@
+name: "Segnalazione sicurezza"
+description: >
+  Usa questo modulo per segnalare vulnerabilità o problemi di sicurezza.
+  Non includere dettagli sensibili: fornisci solo una descrizione generale.
+labels: ['security', 'triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Segnalazione sicurezza
+        Non inserire dettagli sensibili o proof‑of‑concept pubblici.
+        Dopo l'invio, il team ti contatterà per condividere informazioni riservate in modo sicuro.
+
+  - type: input
+    id: titolo
+    attributes:
+      label: "Titolo (OBBLIGATORIO)"
+      description: "Usa il prefisso 'security:' seguito da una breve descrizione."
+      placeholder: "security: possibile escalation di privilegi"
+    validations:
+      required: true
+
+  - type: textarea
+    id: descrizione
+    attributes:
+      label: "Descrizione generale della vulnerabilità (OBBLIGATORIO)"
+      description: "Descrivi il tipo di problema senza includere dettagli sensibili."
+      placeholder: "Descrizione generale del problema..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: impatto
+    attributes:
+      label: "Impatto potenziale"
+      description: "Descrivi l'impatto stimato (es. accesso non autorizzato, perdita di dati, ecc.)."
+      placeholder: "L'impatto potenziale è..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severita
+    attributes:
+      label: "Severità stimata"
+      description: "Seleziona la severità stimata del problema."
+      options:
+        - critical
+        - high
+        - medium
+        - low
+    validations:
+      required: true
+
+  - type: textarea
+    id: contesto
+    attributes:
+      label: "Contesto aggiuntivo"
+      description: "Inserisci informazioni utili per comprendere il problema (senza dettagli sensibili)."
+      placeholder: "Ulteriori informazioni..."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        **Promemoria**
+        - Non condividere exploit, PoC o dati sensibili.
+        - Segui la procedura privata descritta in SECURITY.md per inviare dettagli riservati.

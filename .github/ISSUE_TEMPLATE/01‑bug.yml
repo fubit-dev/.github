@@ -1,0 +1,90 @@
+name: "Segnalazione bug"
+description: >
+  Usa questo modulo per segnalare un comportamento errato, crash o malfunzionamento.
+  Fornisci passi per riprodurre, ambiente, log e comportamento atteso/osservato.
+labels: ['bug', 'triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Segnalazione bug
+        Compila tutti i campi obbligatori. Non includere dati sensibili nei log.
+
+  - type: input
+    id: titolo
+    attributes:
+      label: "Titolo (OBBLIGATORIO)"
+      description: "Usa il prefisso 'fix:' seguito da una breve descrizione."
+      placeholder: "fix: errore durante il login"
+    validations:
+      required: true
+
+  - type: textarea
+    id: descrizione
+    attributes:
+      label: "Descrizione del problema (OBBLIGATORIO)"
+      description: "Spiega cosa succede, quando si verifica e con quale frequenza."
+      placeholder: "Descrizione dettagliata del bug..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: passi
+    attributes:
+      label: "Passi per riprodurre (OBBLIGATORIO)"
+      description: "Elenca i passi necessari per riprodurre il problema."
+      placeholder: |
+        1. Vai su...
+        2. Clicca su...
+        3. Osserva l'errore...
+    validations:
+      required: true
+
+  - type: textarea
+    id: comportamento_atteso
+    attributes:
+      label: "Comportamento atteso (OBBLIGATORIO)"
+      description: "Descrivi cosa ti aspettavi che accadesse."
+      placeholder: "Il comportamento atteso è..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: comportamento_osservato
+    attributes:
+      label: "Comportamento osservato (OBBLIGATORIO)"
+      description: "Descrivi cosa accade realmente."
+      placeholder: "Il comportamento osservato è..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ambiente
+    attributes:
+      label: "Ambiente (OBBLIGATORIO)"
+      description: "Seleziona l'ambiente in cui si verifica il problema."
+      options:
+        - development
+        - staging
+        - production
+        - altro
+    validations:
+      required: true
+
+  - type: textarea
+    id: log
+    attributes:
+      label: "Log / Output"
+      description: "Incolla log rilevanti o output di errore (senza dati sensibili)."
+      placeholder: "Log o output..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: info_aggiuntive
+    attributes:
+      label: "Informazioni aggiuntive"
+      description: "Inserisci dettagli utili: browser, OS, versione, screenshot, ecc."
+      placeholder: "Ulteriori dettagli..."
+    validations:
+      required: false

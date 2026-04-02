@@ -1,0 +1,104 @@
+name: "Richiesta funzionalità (feat)"
+description: >
+  Usa questo modulo per proporre nuove funzionalità o miglioramenti.
+  Fornisci motivazione, casi d'uso, criteri di accettazione e mockup se disponibili.
+labels: ['enhancement', 'triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Richiesta di funzionalità
+        Fornisci contesto, motivazione e criteri di accettazione chiari. Allegati consigliati: mockup, wireframe, screenshot, diagrammi.
+
+  - type: input
+    id: pr_title
+    attributes:
+      label: "Titolo (OBBLIGATORIO)"
+      description: "Usa il prefisso \"feat:\" seguito da una breve descrizione."
+      placeholder: "feat: aggiunge supporto per X"
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: "Descrizione sintetica (OBBLIGATORIO)"
+      description: "Spiega in 2-4 righe cosa propone la funzionalità."
+      placeholder: "Breve descrizione della funzionalità..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: "Motivazione e valore (OBBLIGATORIO)"
+      description: "Perché questa funzionalità è necessaria? Quale problema risolve o quale valore aggiunge?"
+      placeholder: "Motivazione e benefici per gli utenti/il prodotto..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_cases
+    attributes:
+      label: "Casi d'uso / Flussi (OBBLIGATORIO)"
+      description: "Descrivi i principali casi d'uso o flussi utente che la funzionalità abilita."
+      placeholder: "1. Utente fa X e ottiene Y..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: "Criteri di accettazione (OBBLIGATORIO)"
+      description: "Elenca i criteri misurabili che devono essere soddisfatti per considerare la funzionalità completata."
+      placeholder: "- Comportamento A verificabile; - Test B superato; ..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority / Urgenza (OBBLIGATORIO)"
+      description: "Indica la priorità stimata per questa richiesta."
+      options:
+        - critical
+        - high
+        - medium
+        - low
+    validations:
+      required: true
+
+  - type: input
+    id: related_issues
+    attributes:
+      label: "Issue correlate (opzionale)"
+      description: "Inserisci riferimenti a issue o PR correlate (es. #123, #456) se presenti."
+      placeholder: "#123, #456"
+    validations:
+      required: false
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: "Impatto stimato"
+      description: "Indica l'impatto su UX, performance, compatibilità, costi di implementazione o dipendenze."
+      placeholder: "Impatto su utenti, API, DB, ecc."
+    validations:
+      required: false
+
+  - type: textarea
+    id: allegati_link
+    attributes:
+      label: "Link a mockup / screenshot / diagrammi"
+      description: "Incolla link a mockup, wireframe o altri file utili. Dopo la creazione dell'issue puoi caricare file tramite l'interfaccia Issue."
+      placeholder: "Link a GDrive/S3 o URL"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        **Promemoria**
+        - Ricorda di usare Conventional Commits per il titolo (`feat:`).
+        - Se la funzionalità introduce breaking changes, documentali nella sezione "Note di rilascio" quando apri la PR.
