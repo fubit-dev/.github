@@ -1,79 +1,132 @@
-# Sicurezza e segnalazioni di vulnerabilità
+# Segnalazione di vulnerabilità e problemi di sicurezza
 
-Questo documento descrive come segnalare vulnerabilità di sicurezza relative ai progetti dell'organizzazione **fubit-dev** e come gestiamo la divulgazione responsabile.
-
----
-
-## Contatto per segnalazioni riservate
-
-**Metodo preferito**: invia una segnalazione privata a  
-**Email**: `fubit-dev@protonmail.com`
-
-Se non vuoi usare email, puoi aprire una segnalazione privata seguendo le istruzioni fornite dai maintainer (contatto disponibile nella pagina del repository).
+**Data di entrata in vigore:** 01/06/2026  
+**Lingua principale:** inglese  
+**Organizzazione:** fubit-dev
 
 ---
 
-## Cosa non pubblicare in una issue pubblica
+## Scopo
 
-**Non pubblicare** exploit completi, chiavi private, password, dati personali sensibili o PoC che consentono l'abuso immediato del sistema. Se la segnalazione contiene informazioni sensibili, usa il canale privato indicato sopra.
-
----
-
-## Informazioni da includere nella segnalazione
-
-Per aiutarci a valutare e riprodurre la vulnerabilità, includi quanto segue quando possibile:
-
-- **Titolo sintetico** della vulnerabilità.  
-- **Descrizione** dell'impatto e del comportamento osservato.  
-- **Versioni interessate** (es. `v1.2.3`, range di versioni o commit SHA).  
-- **Passi per riprodurre** (comandi, input, condizioni ambientali).  
-- **Esempio minimo riproducibile** o PoC (se non sensibile; altrimenti invialo in privato).  
-- **Log, stack trace, output** rilevanti.  
-- **Eventuali workaround** o mitigazioni temporanee già provate.  
-- **Contatto** per comunicazioni riservate (email o canale alternativo).
+Il presente documento descrive le modalità di segnalazione delle vulnerabilità di sicurezza che interessano i progetti fubit-dev e le nostre procedure di divulgazione responsabile. Definisce i canali di segnalazione obbligatori, i requisiti di crittografia e firma, i tempi di risposta, la conservazione dei dati e i controlli di accesso.
 
 ---
 
-## Come gestiamo le segnalazioni
+## Ambito di applicazione
 
-1. **Ricezione**: confermiamo la ricezione entro **72 ore** all'indirizzo fornito.  
-2. **Valutazione**: classifichiamo la gravità e la riproducibilità; potremmo chiedere dettagli aggiuntivi.  
-3. **Mitigazione**: lavoriamo su una correzione o mitigazione e coordiniamo la divulgazione responsabile.  
-4. **Divulgazione**: concordiamo con il segnalante la tempistica della divulgazione pubblica; rilasciamo patch e advisory.  
-5. **CVE**: se applicabile, richiediamo o assegniamo un identificatore CVE e pubblichiamo un advisory.
+- **Si applica a:** tutte le interazioni relative ai repository, ai servizi e alle risorse di fubit-dev.
+- **Visibilità del repository:** i repository sono privati e accessibili solo al personale autorizzato. L'apertura di un ticket all'interno di un repository privato implica che tu sia personale autorizzato. I segnalatori esterni che scoprono codice o problemi in luoghi pubblici (mirror, siti di paste, fork, fughe di notizie pubbliche) devono segnalarli in privato tramite l'indirizzo e-mail riportato di seguito.
 
 ---
 
-## Tempi di risposta e riservatezza
+## Contatti per la segnalazione (riservati)
 
-- **Prima risposta**: entro **72 ore**.  
-- **Aggiornamenti**: forniremo aggiornamenti regolari fino alla risoluzione.  
-- **Riservatezza**: trattiamo le segnalazioni in modo confidenziale fino alla divulgazione concordata.
-
----
-
-## Processo di divulgazione responsabile
-
-- Lavoriamo con il segnalante per risolvere il problema prima della divulgazione pubblica.  
-- Non pubblicheremo dettagli tecnici completi fino a quando non sarà disponibile una correzione o una mitigazione adeguata.  
-- Se il segnalante desidera la divulgazione coordinata, concordiamo una data e un advisory congiunto.
+- **Metodo preferito:** inviare un'e-mail a **<fubit-dev@protonmail.com>**.
+- **Non** pubblicare i dettagli delle vulnerabilità in ticket pubblici, commenti o forum.
 
 ---
 
-## Cosa succede se la segnalazione è pubblica
+## Requisiti obbligatori di crittografia e firma
 
-Se una vulnerabilità viene pubblicata pubblicamente prima che sia stata risolta, la priorità di intervento può aumentare e potremmo accelerare la mitigazione. Contattaci immediatamente tramite il canale privato.
+Per proteggere le informazioni sensibili, **tutte le segnalazioni di vulnerabilità devono essere inviate già crittografate e firmate** come segue:
+
+1. **Firmare la segnalazione** con la propria chiave privata PGP/GPG in modo che gli amministratori del team possano verificare l'identità del segnalante.
+2. **Crittografare la segnalazione firmata** con la chiave pubblica PGP degli amministratori del team in modo che solo loro possano decrittografarla.
+3. **Includi la tua chiave pubblica PGP** (o un link ad essa) con l'invio in modo che gli amministratori del team possano verificare la firma.
+4. Se non riesci a eseguire la firma e la crittografia, contattaci prima via e-mail per concordare un canale sicuro alternativo prima di inviare dettagli sensibili.
+
+> Nota: se sei un segnalatore interno autorizzato e non puoi utilizzare PGP per motivi tecnici, contatta gli amministratori del team per concordare un metodo sicuro alternativo prima di inviare dati sensibili.
+
+**Come inviare la segnalazione:** allega il file crittografato a un'e-mail indirizzata a **<fubit-dev@protonmail.com>**. Nell'oggetto dell'e-mail includi: `Segnalazione di sicurezza — [titolo breve]`. Nel corpo dell'e-mail includi solo metadati non sensibili (contatti del segnalante, nome file preferito per l'allegato crittografato e se richiedi l'anonimato).
 
 ---
 
-## Ringraziamenti e riconoscimenti
+## Cosa non pubblicare pubblicamente
 
-Apprezziamo i contributi della community. Se desideri essere riconosciuto pubblicamente per la segnalazione, indicacelo; altrimenti rispetteremo l'anonimato su richiesta.
+**Non** pubblicare codice di exploit, chiavi private, password, informazioni di identificazione personale o exploit proof-of-concept in segnalazioni pubbliche, commenti o repository. Se la tua segnalazione contiene materiale sensibile, utilizza il canale di posta elettronica crittografata indicato sopra.
 
 ---
 
-## Domande frequenti rapide
+## Informazioni da includere (metadati non sensibili)
 
-- **Posso inviare PoC?** Sì, ma preferibilmente tramite canale privato se il PoC è exploitabile.  
-- **Assegnate CVE?** Sì, quando appropriato.  
-- **Tempi di patch?** Dipendono dalla gravità e dalla complessità; forniremo stime dopo la valutazione iniziale.
+Quando possibile, includi quanto segue (in modo sicuro e crittografato se sensibile):
+
+- **Titolo breve** del problema.
+- **Descrizione** dell'impatto e del comportamento osservato.
+- **Versioni interessate** (ad es., `v1.2.3`, SHA del commit o intervallo).
+- **Passaggi per riprodurre il problema** (comandi, input, ambiente).
+- **Esempio minimo riproducibile** o PoC (crittografato se sfruttabile).
+- **Log, tracce dello stack, output** (crittografati se sensibili).
+- **Soluzioni alternative** o misure di mitigazione provate.
+- **Contatto preferito** per un follow-up privato.
+- **Chiave pubblica PGP del segnalante** o link ad essa (per la verifica della firma).
+
+---
+
+## Handling and response times
+
+- **Acknowledgement:** Team Admins will acknowledge receipt within **5 business days**.
+- **Initial assessment:** we will classify severity and reproducibility and may request additional details.
+- **Updates:** we will provide regular updates until resolution.
+- **Coordination:** we will coordinate remediation and disclosure with the reporter.
+
+---
+
+## Responsible team and access control
+
+- **Who handles reports:** Team Admins are the only group authorized to receive, decrypt, and handle vulnerability reports.
+- **Access to report data:** strictly limited to Team Admins. No other personnel will access report contents unless explicitly required for remediation and approved by Team Admins.
+- **Private repositories:** only authorized personnel may view private repositories. Opening an issue inside a private repository indicates you are authorized personnel. External reporters must use the private email channel.
+
+---
+
+## Retention and data protection
+
+- **Retention period:** report data and related materials will be retained for up to **2 years** from the date of resolution, unless legal obligations require longer retention.
+- **Storage:** all report data will be stored encrypted.
+- **Access:** only Team Admins may access stored report data.
+- **Deletion:** after the retention period (or earlier if requested and not legally constrained), data will be securely deleted.
+
+---
+
+## CVE, advisories, and disclosure
+
+- When appropriate, we will coordinate with the reporter to request or assign a **CVE** and publish a joint advisory after a fix is available.
+- We will not publish technical details before a fix or mitigation is available, except by mutual agreement with the reporter.
+- If a vulnerability is publicly disclosed before a fix, we will prioritize mitigation and may accelerate disclosure. Unauthorized public disclosure may lead to enforcement actions as described in **LICENSE.md**.
+
+---
+
+## Interazione con altre politiche
+
+- Consulta **LICENSE.md** per le licenze e le restrizioni legali.
+- Consulta **CODE_OF_CONDUCT.md** per conoscere il comportamento previsto nell'interazione con il progetto e le procedure di segnalazione.
+- Consulta **CONTRIBUTING.md** per le regole di contribuzione e i requisiti di revisione delle PR.
+
+---
+
+## Flusso di lavoro per le segnalazioni (sintesi)
+
+1. Preparare una segnalazione firmata e crittografarla con la chiave pubblica PGP degli amministratori del team.
+2. Inviare l'allegato crittografato via e-mail a **<fubit-dev@protonmail.com>** con oggetto `Segnalazione di sicurezza — [titolo breve]`.
+3. Gli amministratori del team confermeranno la ricezione entro **5 giorni lavorativi** e inizieranno la valutazione.
+4. Gli amministratori del team coordinano con il segnalante le misure correttive, il CVE/avviso (se applicabile) e i tempi di divulgazione.
+5. Dopo la risoluzione, i dati della segnalazione vengono conservati per un massimo di **2 anni**, quindi cancellati in modo sicuro, salvo diversamente richiesto da motivi legali.
+
+---
+
+## Se sei un segnalatore esterno
+
+Se non fai parte del personale autorizzato e individui codice o problemi in spazi pubblici (mirror, siti di paste, fork o altre pubblicazioni pubbliche), **non** aprire ticket pubblici. Segnalali in privato inviando i dettagli crittografati via e-mail a **<fubit-dev@protonmail.com>**.
+
+---
+
+## Contatti ed escalation
+
+- **Contatto principale:** <fubit-dev@protonmail.com>
+- **Gruppo responsabile:** Amministratori del team
+
+---
+
+**Data di entrata in vigore:** 01/06/2026  
+**Versione:** 1.0
