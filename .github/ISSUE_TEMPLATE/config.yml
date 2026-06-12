@@ -1,7 +1,7 @@
 blank_issues_enabled: false
 contact_links:
   - name: "Contatti organizzazione"
-    url: "/.github/SECURITY.md"
+    url: "/SECURITY.md"
     about: "Per richieste generali o segnalazioni riservate, segui la procedura indicata in SECURITY.md."
 issue_template:
   - name: "Segnala un bug"
