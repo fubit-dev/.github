@@ -34,10 +34,10 @@ body:
       label: "Ambiente"
       description: "Ambiente in cui si osserva il problema."
       options:
-        - development
-        - staging
-        - production
-        - altro
+        - Development
+        - Staging
+        - Production
+        - Altro
     validations:
       required: true
 

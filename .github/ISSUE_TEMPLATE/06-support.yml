@@ -34,10 +34,10 @@ body:
       label: "Ambiente"
       description: "Ambiente in cui si verifica il problema o dove serve supporto."
       options:
-        - development
-        - staging
-        - production
-        - altro
+        - Development
+        - Staging
+        - Production
+        - Altro
     validations:
       required: true
 
@@ -63,15 +63,15 @@ body:
       required: false
 
   - type: dropdown
-    id: urgency
+    id: priority
     attributes:
-      label: "Urgenza"
-      description: "Indica quanto è urgente la richiesta."
+      label: "Priority / Urgenza"
+      description: "Indica la priorità stimata per questa richiesta."
       options:
-        - critical
-        - high
-        - medium
-        - low
+        - 🟣 Urgent
+        - 🔴 High
+        - 🟠 Medium
+        - 🟢 Low
     validations:
       required: true
 

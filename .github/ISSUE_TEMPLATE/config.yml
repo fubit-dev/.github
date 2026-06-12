@@ -4,44 +4,44 @@ contact_links:
     url: "/SECURITY.md"
     about: "Per richieste generali o segnalazioni riservate, segui la procedura indicata in SECURITY.md."
 issue_template:
-  - name: "Segnala un bug"
+  - name: "🐛 Segnala un bug"
     about: "Segnala un comportamento errato, crash o malfunzionamento."
-    title: "fix: "
+    title: "🐛 fix: "
     labels:
       - bug
       - triage
     path: "ISSUE_TEMPLATE/01-bug.yml"
-  - name: "Segnalazione sicurezza"
+  - name: "🔒 Segnalazione sicurezza"
     about: "Segnala vulnerabilità o problemi di sicurezza (non pubblicare dettagli sensibili)."
-    title: "security: "
+    title: "🔒 security: "
     labels:
       - security
       - triage
     path: "ISSUE_TEMPLATE/02-security.yml"
-  - name: "Segnalazione performance"
+  - name: "⚡ Segnalazione performance"
     about: "Segnala regressioni o problemi di performance."
-    title: "perf: "
+    title: "⚡ perf: "
     labels:
       - performance
       - triage
     path: "ISSUE_TEMPLATE/03-performance.yml"
-  - name: "Richiesta funzionalità"
+  - name: "✨ Richiesta funzionalità"
     about: "Proponi nuove funzionalità o miglioramenti."
-    title: "feat: "
+    title: "✨ feat: "
     labels:
       - enhancement
       - triage
     path: "ISSUE_TEMPLATE/04-feature.yml"
-  - name: "Richiesta modifica documentazione"
+  - name: "📝 Richiesta modifica documentazione"
     about: "Proponi modifiche, correzioni o integrazioni alla documentazione."
-    title: "docs: "
+    title: "📝 docs: "
     labels:
       - docs
       - triage
     path: "ISSUE_TEMPLATE/05-docs.yml"
-  - name: "Richiesta supporto"
+  - name: "🆘 Richiesta supporto"
     about: "Chiedi assistenza, chiarimenti o aiuto operativo."
-    title: "support: "
+    title: "🆘 support: "
     labels:
       - support
       - triage
