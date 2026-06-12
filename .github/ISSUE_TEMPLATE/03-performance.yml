@@ -1,4 +1,4 @@
-name: "Segnalazione performance (perf)"
+name: "⚡ Segnalazione performance (perf)"
 description: >
   Usa questo modulo per segnalare regressioni o problemi di performance.
   Fornisci metriche, ambiente, passi per riprodurre e allega benchmark o log se disponibili.
