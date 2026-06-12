@@ -83,15 +83,15 @@ body:
       required: true
 
   - type: dropdown
-    id: gravita
+    id: priority
     attributes:
-      label: "Gravità / Priorità"
-      description: "Indica la gravità dell'impatto sulle operazioni o sugli utenti."
+      label: "Priority / Urgenza"
+      description: "Indica la priorità stimata per questa richiesta."
       options:
-        - critical
-        - high
-        - medium
-        - low
+        - 🟣 Urgent
+        - 🔴 High
+        - 🟠 Medium
+        - 🟢 Low
     validations:
       required: true
 

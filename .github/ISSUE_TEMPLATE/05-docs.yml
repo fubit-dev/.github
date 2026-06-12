@@ -13,7 +13,7 @@ body:
   - type: input
     id: pr_title
     attributes:
-      label: "Titolo (OBBLIGATORIO)"
+      label: "Titolo"
       description: "Usa il prefisso \"docs:\" seguito da una breve descrizione."
       placeholder: "docs: corregge esempio nella guida X"
     validations:
@@ -22,7 +22,7 @@ body:
   - type: input
     id: doc_page
     attributes:
-      label: "Pagina o file interessato (OBBLIGATORIO)"
+      label: "Pagina o file interessato"
       description: "Indica il percorso o l'URL della pagina/documento da aggiornare (es. docs/guide/intro.md o /README.md)."
       placeholder: "docs/guide/intro.md"
     validations:
@@ -31,7 +31,7 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: "Descrizione della modifica proposta (OBBLIGATORIO)"
+      label: "Descrizione della modifica proposta"
       description: "Spiega in 2-4 righe cosa va cambiato e perché."
       placeholder: "Descrizione della modifica proposta..."
     validations:
@@ -40,7 +40,7 @@ body:
   - type: textarea
     id: proposed_text
     attributes:
-      label: "Testo proposto / Esempio (OBBLIGATORIO)"
+      label: "Testo proposto / Esempio"
       description: "Inserisci il testo suggerito, un esempio o un piccolo diff. Se preferisci, allega un file con il contenuto."
       placeholder: "Testo proposto o snippet..."
     validations:
@@ -58,7 +58,7 @@ body:
   - type: input
     id: related_issues
     attributes:
-      label: "Issue correlate (opzionale)"
+      label: "Issue correlate"
       description: "Inserisci riferimenti a issue o PR correlate (es. #123, #456) se presenti."
       placeholder: "#123, #456"
     validations:
@@ -68,14 +68,14 @@ body:
     id: priority
     attributes:
       label: "Priority / Urgenza"
-      description: "Indica la priorità stimata per questa modifica documentale."
+      description: "Indica la priorità stimata per questa richiesta."
       options:
-        - critical
-        - high
-        - medium
-        - low
+        - 🟣 Urgent
+        - 🔴 High
+        - 🟠 Medium
+        - 🟢 Low
     validations:
-      required: false
+      required: true
 
   - type: textarea
     id: allegati_link

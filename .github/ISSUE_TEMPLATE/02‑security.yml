@@ -14,7 +14,7 @@ body:
   - type: input
     id: titolo
     attributes:
-      label: "Titolo (OBBLIGATORIO)"
+      label: "Titolo"
       description: "Usa il prefisso 'security:' seguito da una breve descrizione."
       placeholder: "security: possibile escalation di privilegi"
     validations:
@@ -23,7 +23,7 @@ body:
   - type: textarea
     id: descrizione
     attributes:
-      label: "Descrizione generale della vulnerabilità (OBBLIGATORIO)"
+      label: "Descrizione generale della vulnerabilità"
       description: "Descrivi il tipo di problema senza includere dettagli sensibili."
       placeholder: "Descrizione generale del problema..."
     validations:
@@ -39,15 +39,15 @@ body:
       required: true
 
   - type: dropdown
-    id: severita
+    id: priority
     attributes:
-      label: "Severità stimata"
-      description: "Seleziona la severità stimata del problema."
+      label: "Priority / Urgenza"
+      description: "Indica la priorità stimata per questa richiesta."
       options:
-        - critical
-        - high
-        - medium
-        - low
+        - 🟣 Urgent
+        - 🔴 High
+        - 🟠 Medium
+        - 🟢 Low
     validations:
       required: true
 

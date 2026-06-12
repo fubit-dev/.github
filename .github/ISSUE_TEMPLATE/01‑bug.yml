@@ -13,7 +13,7 @@ body:
   - type: input
     id: titolo
     attributes:
-      label: "Titolo (OBBLIGATORIO)"
+      label: "Titolo"
       description: "Usa il prefisso 'fix:' seguito da una breve descrizione."
       placeholder: "fix: errore durante il login"
     validations:
@@ -22,7 +22,7 @@ body:
   - type: textarea
     id: descrizione
     attributes:
-      label: "Descrizione del problema (OBBLIGATORIO)"
+      label: "Descrizione del problema"
       description: "Spiega cosa succede, quando si verifica e con quale frequenza."
       placeholder: "Descrizione dettagliata del bug..."
     validations:
@@ -31,7 +31,7 @@ body:
   - type: textarea
     id: passi
     attributes:
-      label: "Passi per riprodurre (OBBLIGATORIO)"
+      label: "Passi per riprodurre"
       description: "Elenca i passi necessari per riprodurre il problema."
       placeholder: |
         1. Vai su...
@@ -43,7 +43,7 @@ body:
   - type: textarea
     id: comportamento_atteso
     attributes:
-      label: "Comportamento atteso (OBBLIGATORIO)"
+      label: "Comportamento atteso"
       description: "Descrivi cosa ti aspettavi che accadesse."
       placeholder: "Il comportamento atteso è..."
     validations:
@@ -52,22 +52,35 @@ body:
   - type: textarea
     id: comportamento_osservato
     attributes:
-      label: "Comportamento osservato (OBBLIGATORIO)"
+      label: "Comportamento osservato"
       description: "Descrivi cosa accade realmente."
       placeholder: "Il comportamento osservato è..."
     validations:
       required: true
 
   - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority / Urgenza"
+      description: "Indica la priorità stimata per questa richiesta."
+      options:
+        - 🟣 Urgent
+        - 🔴 High
+        - 🟠 Medium
+        - 🟢 Low
+    validations:
+      required: true
+
+  - type: dropdown
     id: ambiente
     attributes:
-      label: "Ambiente (OBBLIGATORIO)"
+      label: "Ambiente"
       description: "Seleziona l'ambiente in cui si verifica il problema."
       options:
-        - development
-        - staging
-        - production
-        - altro
+        - Development
+        - Staging
+        - Production
+        - Altro
     validations:
       required: true
 

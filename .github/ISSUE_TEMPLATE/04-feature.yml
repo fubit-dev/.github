@@ -13,7 +13,7 @@ body:
   - type: input
     id: pr_title
     attributes:
-      label: "Titolo (OBBLIGATORIO)"
+      label: "Titolo"
       description: "Usa il prefisso \"feat:\" seguito da una breve descrizione."
       placeholder: "feat: aggiunge supporto per X"
     validations:
@@ -22,7 +22,7 @@ body:
   - type: textarea
     id: summary
     attributes:
-      label: "Descrizione sintetica (OBBLIGATORIO)"
+      label: "Descrizione sintetica"
       description: "Spiega in 2-4 righe cosa propone la funzionalità."
       placeholder: "Breve descrizione della funzionalità..."
     validations:
@@ -31,7 +31,7 @@ body:
   - type: textarea
     id: motivation
     attributes:
-      label: "Motivazione e valore (OBBLIGATORIO)"
+      label: "Motivazione e valore"
       description: "Perché questa funzionalità è necessaria? Quale problema risolve o quale valore aggiunge?"
       placeholder: "Motivazione e benefici per gli utenti/il prodotto..."
     validations:
@@ -40,7 +40,7 @@ body:
   - type: textarea
     id: use_cases
     attributes:
-      label: "Casi d'uso / Flussi (OBBLIGATORIO)"
+      label: "Casi d'uso / Flussi"
       description: "Descrivi i principali casi d'uso o flussi utente che la funzionalità abilita."
       placeholder: "1. Utente fa X e ottiene Y..."
     validations:
@@ -49,7 +49,7 @@ body:
   - type: textarea
     id: acceptance_criteria
     attributes:
-      label: "Criteri di accettazione (OBBLIGATORIO)"
+      label: "Criteri di accettazione"
       description: "Elenca i criteri misurabili che devono essere soddisfatti per considerare la funzionalità completata."
       placeholder: "- Comportamento A verificabile; - Test B superato; ..."
     validations:
@@ -58,20 +58,20 @@ body:
   - type: dropdown
     id: priority
     attributes:
-      label: "Priority / Urgenza (OBBLIGATORIO)"
+      label: "Priority / Urgenza"
       description: "Indica la priorità stimata per questa richiesta."
       options:
-        - critical
-        - high
-        - medium
-        - low
+        - 🟣 Urgent
+        - 🔴 High
+        - 🟠 Medium
+        - 🟢 Low
     validations:
       required: true
 
   - type: input
     id: related_issues
     attributes:
-      label: "Issue correlate (opzionale)"
+      label: "Issue correlate"
       description: "Inserisci riferimenti a issue o PR correlate (es. #123, #456) se presenti."
       placeholder: "#123, #456"
     validations:
