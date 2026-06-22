@@ -1,4 +1,4 @@
-## Titolo (OBBLIGATORIO)
+# Titolo (OBBLIGATORIO)
 > Usa il prefisso `feat:`, `fix:`, `docs:`, `perf:`, `refactor:`, `chore:` secondo Conventional Commits.
 
 ---
