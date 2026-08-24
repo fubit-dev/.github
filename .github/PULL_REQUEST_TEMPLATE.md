@@ -60,6 +60,7 @@ Assicurati di aver completato tutti i punti della checklist prima di richiedere 
 - [ ] Non sono presenti segreti, chiavi o dati sensibili nel codice
 - [ ] Tutti i test passano correttamente
 - [ ] La documentazione è stata aggiornata (se necessario)
+- [ ] Ho verificato che non ci siano breaking changes non documentati
 - [ ] Le modifiche sono state testate in locale e in un ambiente di staging
 - [ ] Le modifiche non introducono regressioni o bug noti
 - [ ] La PR è stata assegnata al Team `@reviewers`
