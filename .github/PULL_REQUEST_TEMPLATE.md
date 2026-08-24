@@ -1,57 +1,80 @@
-# Titolo (OBBLIGATORIO)
-> Usa il prefisso `feat:`, `fix:`, `docs:`, `perf:`, `refactor:`, `chore:` secondo Conventional Commits.
+# Titolo
+<!-- 
+Sostituisci `# Titolo` con il titolo della PR.
+Usa il prefisso corretto secondo Conventional Commits:
+feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert
+-->
 
 ---
 
-## Descrizione (OBBLIGATORIO)
-Spiega in 2–4 righe cosa introduce o modifica questa PR.
+## Descrizione
+
+<!-- 
+Una sintesi concisa di cosa fa questa PR e perché.
+Non una semplice ripetizione del titolo del ticket, ma il contesto effettivo. 
+Il Team @reviewers deve comprendere lo scopo della modifica dopo aver letto solo questa sezione.
+-->
 
 ---
 
-## Tipo di modifica (OBBLIGATORIO)
-Seleziona una delle seguenti opzioni:
+## Tipo di modifica
 
-- [ ] Nuova funzionalità (`feat`)
-- [ ] Bug fix (`fix`)
-- [ ] Modifica documentazione (`docs`)
-- [ ] Miglioramento performance (`perf`)
-- [ ] Refactor senza cambiamenti funzionali (`refactor`)
-- [ ] Manutenzione / build / CI (`chore`)
-- [ ] Altro (specificare)
+<!-- Seleziona la checkbox corretta secondo Conventional Commits -->
+
+- [ ] **`feat`:** Nuova funzionalità
+- [ ] **`fix`:** Correzione di bug
+- [ ] **`docs`:** Modifiche alla documentazione
+- [ ] **`style`:** Modifiche che non influenzano il significato del codice (spazi bianchi, formattazione, ecc.)
+- [ ] **`refactor`:** Modifica del codice che non aggiunge funzionalità né corregge bug
+- [ ] **`perf`:** Modifica del codice per migliorare le prestazioni
+- [ ] **`test`:** Aggiunta o correzione di test
+- [ ] **`build`:** Modifiche che influenzano il sistema di build o le dipendenze esterne
+- [ ] **`ci`:** Modifiche ai file di configurazione e script di "continuous integration"
+- [ ] **`chore`:** Altre modifiche che non modificano il codice
+- [ ] **`revert`:** Annulla un commit precedente
 
 ---
 
 ## Issue collegate
-> Inserisci riferimenti a issue o PR correlate (es. `#123`).
+<!-- 
+Collegamento a issue, PR o ticket correlati. Usa il formato 'Closes #<numero_issue>' o 'Fixes #<numero_issue>' per chiudere automaticamente le issue collegate quando viene effettuato il merge della PR.
+-->
+
+Closes #
 
 ---
 
-## Come testare (OBBLIGATORIO)
-Descrivi i passi necessari per verificare la modifica:
-
-1. …
-2. …
-3. …
+## Come testare
+<!-- 
+Descrivi in modo dettagliato le istruzioni per testare la PR e verificare che le modifiche funzionino correttamente.
+ -->
 
 ---
 
-## Screenshot / Output
-> Inserisci screenshot, log o output rilevanti (se applicabile).
+## Checklist
+<!--
+Assicurati di aver completato tutti i punti della checklist prima di richiedere la revisione della PR.
+-->
 
----
-
-## Checklist (OBBLIGATORIO)
-
-- [ ] La PR segue il formato Conventional Commits
-- [ ] Non contiene segreti, chiavi o dati sensibili
-- [ ] Tutti i test passano
-- [ ] La documentazione è aggiornata (se necessario)
+- [ ] Il formato Conventional Commits è stato rispettato
+- [ ] Non sono presenti segreti, chiavi o dati sensibili nel codice
+- [ ] Tutti i test passano correttamente
+- [ ] La documentazione è stata aggiornata (se necessario)
 - [ ] Ho verificato che non ci siano breaking changes non documentati
-- [ ] Ho assegnato la PR al team di revisione `@fubit-dev/reviewers`
+- [ ] Le modifiche sono state testate in locale e in un ambiente di staging
+- [ ] Le modifiche non introducono regressioni o bug noti
+- [ ] La PR è stata assegnata al Team `@reviewers`
 
 ---
 
-## Note di rilascio
-> Aggiungi note utili per il changelog.  
-> Se ci sono breaking changes, descrivili chiaramente.
+## Screenshots / Demo
+<!--
+Allega eventuali screenshot, GIF o link a demo per illustrare le modifiche apportate dalla PR.
+-->
 
+---
+
+## Note
+<!--
+Descrivi eventuali note aggiuntive, considerazioni o informazioni utili per i revisori della PR. Puoi allegare log o link a documentazione esterna se necessario.
+-->
