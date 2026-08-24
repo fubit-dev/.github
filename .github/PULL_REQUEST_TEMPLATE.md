@@ -1,18 +1,18 @@
 # Titolo
 <!-- 
-
 Sostituisci `# Titolo` con il titolo della PR.
-
 Usa il prefisso corretto secondo Conventional Commits:
 feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert
- -->
+-->
 
 ---
 
 ## Descrizione
 
 <!-- 
-Una sintesi concisa di cosa fa questa PR e perché. Non una semplice ripetizione del titolo del ticket, ma il contesto effettivo. Il Team @reviewers deve comprendere lo scopo della modifica dopo aver letto solo questa sezione.
+Una sintesi concisa di cosa fa questa PR e perché.
+Non una semplice ripetizione del titolo del ticket, ma il contesto effettivo. 
+Il Team @reviewers deve comprendere lo scopo della modifica dopo aver letto solo questa sezione.
 -->
 
 ---
